@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img id="logo" src="img/RafiLogoLight.png" width="45" alt="logo"></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li>
+                    <a href="#skills">Skills</a>
+                    <ul>
+                        <li><a href="#head-softskill">Softskill</a></li>
+                        <li><a href="#head-hardskill">Hardskill</a></li>
+                    </ul>
+                </li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="mode-toggle" class="mode-toggle" onclick="toggleMode()">Change</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Profile</h1>
+                <h1 id="text-berjalan">Rafi Ahmad Rifdany</h1>
+                <button onclick="scrollToSection('about')">Learn More</button>
+            </div>
+        </section>
+        <!-- ABOUT SECTION -->
+        <section id="about">
+            <div class="about-content">
+                <img src="img/about.jpg" alt="About Me Image">
+                <div>
+                    <h2>About Me</h2>
+                    <p>Saya mahasiswa berusia 20 tahun. Saya lahir di Probolinggo pada tanggal 22 Maret 2005.
+                        Saya menempuh kuliah di Universitas Jember, Fakultas Ilmu Komputer Program Studi 
+                        Sistem Informasi dan saat ini saya sedang menempuh semester 4.
+                        Saya menguasai beberapa bahasa yaitu Python, C#, HTML, CSS dan JavaScript.
+                        Saya memiliki pengalaman dalam mengerjakan proyek-proyek kecil di bidang pemrograman dan web development.
+                        Saya juga aktif dalam organisasi di kampus dan memiliki kemampuan komunikasi yang baik. Jika Anda tertarik untuk bekerja sama atau memiliki pertanyaan, jangan ragu untuk menghubungi saya.</p>
+                    <a href="files/CV.pdf" download="CV_RafiAhmadRifdany.pdf">
+                        <button id="download-cv">Download CV</button>
+                    </a>
+                    <br>
+                    <a href="https://instagram.com/rafirifdany/" target="_blank">
+                        <button class="social-button">Instagram</button>
+                    </a>
+                    <a href="https://linkedin.com/in/rafi-ahmad-rifdany-0a3952291/" target="_blank">
+                        <button class="social-button">LinkedIn</button>
+                    </a>
+                    <a href="https://github.com/rafiahmad222" target="_blank">
+                        <button class="social-button">GitHub</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="card-skills">
+            <h2>My Skills</h2>
+            <p>Here are some of my skills.</p>
+            <div class="card-container" id="card-container">
+                <h3 id="head-softskill">Soft Skills</h3>
+                <div class="card-softskill" id="soft-skills">
+                    <div class="card">
+                        <img src="img/CommunicationLogo.png" alt="CommunicationLogo" class="skill-logo">
+                        <h4>Communication</h4>
+                        <p>Good communication skills</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/TeamWorkLogo.png" alt="TeamworkLogo" class="skill-logo">
+                        <h4>Teamwork</h4>
+                        <p>Ability to work in a team</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/ProblemSolvingLogo.png" alt="ProblemSolvingLogo" class="skill-logo">
+                        <h4>Problem Solving</h4>
+                        <p>Strong problem-solving skills</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/TimeManagmentLogo.png" alt="TimeManagementLogo" class="skill-logo">
+                        <h4>Time Management</h4>
+                        <p>Effective time management skills</p>
+                    </div>
+                </div>
+                <h3 id="head-hardskill">Hard Skills</h3>
+                <div class="card-hardskill" id="hard-skills">
+                    <div class="card">
+                        <img src="img/PythonLogo.png" alt="PythonLogo" class="skill-logo">
+                        <h4>Python</h4>
+                    </div>
+                    <div class="card">
+                        <img src="img/CSharpLogo.png" alt="CSharpLogo" class="skill-logo">
+                        <h4>C#</h4>
+                    </div>
+                    <div class="card">
+                        <img src="img/HTMLLogo.png" alt="HTMLLogo" class="skill-logo">
+                        <h4>HTML</h4>
+                    </div>
+                    <div class="card">
+                        <img src="img/CSSLogo.png" alt="CSSLogo" class="skill-logo">
+                        <h4>CSS</h4>
+                    </div>
+                    <div class="card">
+                        <img src="img/JSLogo.png" alt="JavaScriptLogo" class="skill-logo">
+                        <h4>JavaScript</h4>
+                    </div>
+                    <div class="card">
+                        <img src="img/PremiereLogo.png" alt="AdobePremiereLogo" class="skill-logo">
+                        <h4>Adobe Premiere</h4>
+                    </div> 
+                    <div class="card">
+                        <img src="img/PhotoshopLogo.png" alt="AdobePhotoshopLogo" class="skill-logo">
+                        <h4>Adobe Photoshop</h4>
+                    </div>
+                    <div class="card">
+                        <img src="img/AfterEffectsLogo.png" alt="AdobeAfterEffectsLogo" class="skill-logo">
+                        <h4>Adobe After Effects</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio">
+            <h2 id="head-porto">My Portfolio</h2>
+            <div class="portfolio-content">
+                <div class="card-portofolio">
+                    <img src="img/PythonLogo.png" alt="Project 1">
+                    <h3>Project KUD 1.0</h3>
+                    <p>Project ini membuat sistem kasir menggunakan bahasa Python pada matakuliah semester 1.</p>
+                    <a href="https://github.com/rafiahmad222/projek-algo-1" target="_blank">
+                        <button class="project-button">View on GitHub</button>
+                    </a>
+                </div>
+                <div class="card-portofolio">
+                    <img src="img/PythonLogo.png" alt="Project 2">
+                    <h3>Project KUD 2.0</h3>
+                    <p>Project ini lanjutan dari project 1 dengan tambahan fitur notifikasi expired dan mulai menggunakan database PostgreSQL</p>
+                    <a href="https://github.com/rafiahmad222/Projek-Algo-2" target="_blank">
+                        <button class="project-button">View on GitHub</button>
+                    </a>
+                </div>
+                <div class="card-portofolio">
+                    <img src="img/project3.jpg" alt="Project 3">
+                    <h3>Project KopMart</h3>
+                    <p>Project ini membuat sistem kasir dengan menggunakan bahasa C# pada matakuliah Pemograman Berbasis Object</p>
+                    <a href="https://github.com/rafiahmad222/PBO-11" target="_blank">
+                        <button class="project-button">View on GitHub</button>
+                    </a>
+                </div>
+                <div class="card-portofolio">
+                    <img src="img/project4.jpg" alt="Project 4">
+                    <h3>Project AgroMart</h3>
+                    <p>Project berbasis website untuk menempuh mata kuliah Pengembangan Perangkat Lunak Untuk Agroindutri Modern</p>
+                        <button class="project-button">On Going</button>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Send me a message</p>
+            <form action="contact.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="50" placeholder="Your Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <!-- <footer>
+        <p>&copy; 2025 - All Rights Reserved</p>
+    </footer> -->
+    <script src="script.js"></script>
+</body>
+</html>
