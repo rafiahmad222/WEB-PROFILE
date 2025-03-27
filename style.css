@@ -540,7 +540,7 @@ form button:hover {
     }
 
     header.hidden {
-        top: -150px; /* Navbar disembunyikan dengan menggeser ke atas */
+        top: -250px; /* Navbar disembunyikan dengan menggeser ke atas */
     }
     .about-content {
         flex-direction: column;
