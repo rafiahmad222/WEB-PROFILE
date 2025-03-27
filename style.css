@@ -535,7 +535,7 @@ form button:hover {
         transition: top 0.5s ease-in-out;
         position: fixed;
         top: 0;
-        width: 80%;
+        width: 100%;
         z-index: 1000;
     }
 
