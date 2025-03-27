@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modeToggle = document.getElementById('mode-toggle');
     const logo = document.getElementById('logo');
 
-    // Pastikan light mode aktif saat pertama kali masuk
+    // light mode aktif saat pertama kali masuk
     body.classList.add('light-mode');
     header.classList.add('light-mode');
     if (footer) footer.classList.add('light-mode');
@@ -65,7 +65,7 @@ function toggleMode() {
 emailjs.init("wJ33Y7Hkm25p7L3tt");
 
 document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault(); // Mencegah pengiriman formulir secara default
+    event.preventDefault(); 
 
     // Ambil data dari formulir
     const name = document.getElementById("name").value;
