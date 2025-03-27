@@ -543,15 +543,6 @@ form button:hover {
         top: -100px; /* Navbar disembunyikan dengan menggeser ke atas */
     }
 
-    header button.mode-toggle {
-        padding: 5px 10px;
-        font-size: 0.8rem;
-    }
-    header button.mode-toggle:hover {
-        padding: 5px 10px;
-        font-size: 0.8rem;
-    }
-
     .about-content {
         flex-direction: column;
         text-align: center;
