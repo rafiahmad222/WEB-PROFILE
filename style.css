@@ -535,13 +535,23 @@ form button:hover {
         transition: top 0.5s ease-in-out;
         position: fixed;
         top: 0;
-        width: 80%;
+        width: 70%;
         z-index: 1000;
     }
 
     header.hidden {
-        top: -250px; /* Navbar disembunyikan dengan menggeser ke atas */
+        top: -100px; /* Navbar disembunyikan dengan menggeser ke atas */
     }
+
+    header button.mode-toggle {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    header button.mode-toggle:hover {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    
     .about-content {
         flex-direction: column;
         text-align: center;
