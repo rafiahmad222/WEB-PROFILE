@@ -61,50 +61,39 @@ function toggleMode() {
     }
 }
 
-// EmailJS
-emailjs.init("wJ33Y7Hkm25p7L3tt");
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("wJ33Y7Hkm25p7L3tt"); // Ganti dengan User ID Anda
 
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    const popup = document.getElementById("status-popup");
+    const statusMessage = document.getElementById("status-message");
+    const closePopup = document.getElementById("close-popup");
 
-    // Ambil data dari formulir
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-    const currentTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" });
+    // Fungsi untuk menampilkan pop-up
+    function showPopup(message, isSuccess) {
+        statusMessage.textContent = message;
+        statusMessage.style.color = isSuccess ? "green" : "red";
+        popup.classList.remove("hidden");
+    }
 
-    // Kirim data ke EmailJS
-    emailjs.send("service_rafi222", "template_rafi", {
-        name: name,
-        email: email,
-        message: message,
-        time: currentTime,
+    // Fungsi untuk menutup pop-up
+    closePopup.addEventListener("click", () => {
+        popup.classList.add("hidden");
+    });
 
-    }).then(
-        function (response) {
-            console.log("SUCCESS!", response.status, response.text);
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
 
-            // Tampilkan pesan sukses
-            const responseDiv = document.getElementById("form-response");
-            responseDiv.style.display = "block";
-            responseDiv.textContent = "Your message has been sent successfully!";
+        let currentTime = new Date().toLocaleString();
+        document.getElementById("time").value = currentTime;
 
-            // Reset formulir
-            document.getElementById("contact-form").reset();
-
-            // Sembunyikan pesan sukses setelah beberapa detik
-            setTimeout(() => {
-                responseDiv.style.display = "none";
-            }, 5000);
-        },
-        function (error) {
-            console.log("FAILED...", error);
-
-            // Tampilkan pesan error
-            const responseDiv = document.getElementById("form-response");
-            responseDiv.style.display = "block";
-            responseDiv.style.color = "red";
-            responseDiv.textContent = "Failed to send message. Please try again later.";
-        }
-    );
+        // Kirim form melalui EmailJS
+        emailjs.sendForm("service_rafi222", "template_rafi", this)
+            .then(function () {
+                showPopup("Pesan berhasil dikirim!", true);
+                document.getElementById("contact-form").reset();
+            }, function (error) {
+                showPopup("Gagal mengirim pesan! Silakan coba lagi.", false);
+                console.error("Error:", error);
+            });
+    });
 });
