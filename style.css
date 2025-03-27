@@ -110,11 +110,11 @@ body.dark-mode nav ul li button.mode-toggle:hover {
 nav ul li ul {
     display: none;
     position: absolute;
-    background: grey; /* Warna latar belakang dropdown */
+    background: grey; 
     padding: 10px 5px;
     list-style: none;
     border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
     z-index: 1000;
     transition: all 0.3s ease-in-out;
     align-items: center;
@@ -135,9 +135,9 @@ nav ul li ul li a {
     /* color: inherit;
     text-decoration: none;
     padding: 5px; */
-    color: inherit; /* Warna teks */
+    color: inherit; 
     text-decoration: none;
-    padding: 10px 20px; /* Jarak dalam dropdown */
+    padding: 10px 20px; 
     display: block;
     transition: background 0.3s ease, color 0.3s ease;
 }
@@ -203,7 +203,7 @@ section {
     font-family: "Barrio", system-ui;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid grey; /* Efek kursor */
+    border-right: 2px solid grey; 
     width: 0;
     display: inline-block;
     animation: typing 7s steps(30, end) infinite, blink 0.5s step-end infinite;
