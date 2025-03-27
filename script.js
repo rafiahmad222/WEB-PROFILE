@@ -62,6 +62,8 @@ function toggleMode() {
 }
 
 // EmailJS
+emailjs.init("wJ33Y7Hkm25p7L3tt");
+
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault(); // Mencegah pengiriman formulir secara default
 
