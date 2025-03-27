@@ -244,8 +244,24 @@ section {
 }
 
 .about-content img {
-    width: 300px;
+    width: 400px;
     border-radius: 10px;
+    animation: floatImage 1.5s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.about-content img:hover {
+    
 }
 
 .about-content h2 {
@@ -491,22 +507,108 @@ form button:hover {
     background: #555;
 }
 
-/* footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+/* Media query untuk layar dengan lebar maksimum 768px (tablet dan ponsel) */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    .about-content p {
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+
+    .about-content button {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto;
+    }
+
+    .card-container, .card-softskill, .card-hardskill {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-portofolio {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
 }
 
-footer.light-mode {
-    background: #fff;
-    color: #000;
-}
+/* Media query untuk layar dengan lebar maksimum 480px (ponsel kecil) */
+@media (max-width: 480px) {
+    header {
+        font-size: 1rem;
+        padding: 5px 0;
+    }
 
-footer.dark-mode {
-    background: #333;
-    color: #fff;
-} */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content button {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .about-content img {
+        max-width: 250px;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .card {
+        font-size: 1rem;
+    }
+
+    .card img {
+        width: 80px;
+        height: 120px;
+    }
+}
