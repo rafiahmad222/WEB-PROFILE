@@ -60,3 +60,48 @@ function toggleMode() {
         logo.src = "img/RafiLogoLight.png";
     }
 }
+
+// EmailJS
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah pengiriman formulir secara default
+
+    // Ambil data dari formulir
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    const currentTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" });
+
+    // Kirim data ke EmailJS
+    emailjs.send("service_rafi222", "template_rafi", {
+        from_name: name,
+        from_email: email,
+        message: message,
+        time: currentTime,
+    }).then(
+        function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+
+            // Tampilkan pesan sukses
+            const responseDiv = document.getElementById("form-response");
+            responseDiv.style.display = "block";
+            responseDiv.textContent = "Your message has been sent successfully!";
+
+            // Reset formulir
+            document.getElementById("contact-form").reset();
+
+            // Sembunyikan pesan sukses setelah beberapa detik
+            setTimeout(() => {
+                responseDiv.style.display = "none";
+            }, 5000);
+        },
+        function (error) {
+            console.log("FAILED...", error);
+
+            // Tampilkan pesan error
+            const responseDiv = document.getElementById("form-response");
+            responseDiv.style.display = "block";
+            responseDiv.style.color = "red";
+            responseDiv.textContent = "Failed to send message. Please try again later.";
+        }
+    );
+});
