@@ -509,6 +509,26 @@ form button:hover {
 
 /* Media query untuk layar dengan lebar maksimum 768px (tablet dan ponsel) */
 @media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    #logo {
+        cursor: pointer;
+    }
     .about-content {
         flex-direction: column;
         text-align: center;

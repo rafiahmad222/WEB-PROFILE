@@ -2,6 +2,11 @@ function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
 
+document.getElementById("logo").addEventListener("click", function () {
+    const navMenu = document.querySelector("nav ul");
+    navMenu.classList.toggle("active");
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const header = document.querySelector('header');
