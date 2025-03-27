@@ -532,10 +532,10 @@ form button:hover {
         padding: 5px 10px;
     }
     header {
-        transition: top 0.3s ease-in-out;
+        transition: top 0.5s ease-in-out;
         position: fixed;
         top: 0;
-        width: 100%;
+        width: 80%;
         z-index: 1000;
     }
 
