@@ -62,20 +62,18 @@ function toggleMode() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("wJ33Y7Hkm25p7L3tt"); // Ganti dengan User ID Anda
+    emailjs.init("wJ33Y7Hkm25p7L3tt"); 
 
     const popup = document.getElementById("status-popup");
     const statusMessage = document.getElementById("status-message");
     const closePopup = document.getElementById("close-popup");
 
-    // Fungsi untuk menampilkan pop-up
     function showPopup(message, isSuccess) {
         statusMessage.textContent = message;
         statusMessage.style.color = isSuccess ? "green" : "red";
         popup.classList.remove("hidden");
     }
 
-    // Fungsi untuk menutup pop-up
     closePopup.addEventListener("click", () => {
         popup.classList.add("hidden");
     });
@@ -86,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentTime = new Date().toLocaleString();
         document.getElementById("time").value = currentTime;
 
-        // Kirim form melalui EmailJS
         emailjs.sendForm("service_rafi222", "template_rafi", this)
             .then(function () {
                 showPopup("Pesan berhasil dikirim!", true);
