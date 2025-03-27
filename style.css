@@ -509,25 +509,38 @@ form button:hover {
 
 /* Media query untuk layar dengan lebar maksimum 768px (tablet dan ponsel) */
 @media (max-width: 768px) {
+    header {
+        font-size: 1rem;
+        padding: 5px 0;
+    }
+
     nav ul {
-        display: none;
         flex-direction: column;
-        background: #333;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        width: 200px;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        align-items: center;
     }
 
-    nav ul.active {
-        display: flex;
+    nav ul li {
+        margin: 5px 0;
     }
 
-    #logo {
-        cursor: pointer;
+    nav ul li:first-child {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+    }
+    header {
+        transition: top 0.3s ease-in-out;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    header.hidden {
+        top: -100px; /* Navbar disembunyikan dengan menggeser ke atas */
     }
     .about-content {
         flex-direction: column;

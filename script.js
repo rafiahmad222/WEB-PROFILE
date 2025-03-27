@@ -2,9 +2,20 @@ function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
 
-document.getElementById("logo").addEventListener("click", function () {
-    const navMenu = document.querySelector("nav ul");
-    navMenu.classList.toggle("active");
+let lastScrollY = window.scrollY;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    if (window.innerWidth <= 768) { // Berlaku hanya untuk layar dengan lebar max 768px
+        if (window.scrollY > lastScrollY) {
+            // Scroll ke bawah, sembunyikan navbar
+            header.classList.add("hidden");
+        } else {
+            // Scroll ke atas, tampilkan navbar
+            header.classList.remove("hidden");
+        }
+        lastScrollY = window.scrollY;
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
