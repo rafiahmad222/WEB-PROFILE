@@ -514,11 +514,6 @@ form button:hover {
         padding: 5px 0;
     }
 
-    /* nav ul {
-        flex-direction: column;
-        align-items: center;
-    } */
-
     nav ul li {
         margin: 5px 0;
     }
@@ -540,7 +535,7 @@ form button:hover {
     }
 
     header.hidden {
-        top: -100px; /* Navbar disembunyikan dengan menggeser ke atas */
+        top: -100px; 
     }
 
     .about-content {
@@ -606,11 +601,6 @@ form button:hover {
         font-size: 0.8rem;
         padding: 5px 0;
     }
-/* 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    } */
 
     nav ul li {
         margin: 5px 0;
