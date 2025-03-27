@@ -73,10 +73,11 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 
     // Kirim data ke EmailJS
     emailjs.send("service_rafi222", "template_rafi", {
-        from_name: name,
-        from_email: email,
+        name: name,
+        email: email,
         message: message,
         time: currentTime,
+
     }).then(
         function (response) {
             console.log("SUCCESS!", response.status, response.text);
